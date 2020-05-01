@@ -2,7 +2,7 @@ step 1:
     puts "hello world"
 
 step 2:
-    puts static welcome --customize
+    puts a welcome message of some kind --customize
     input = gets -- capture data into variable
     puts input -- puts variable instead of hard coded string
 
