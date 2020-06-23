@@ -2,6 +2,7 @@ require_relative 'car'
 require_relative 'inventory'
 require_relative 'form_data'
 require_relative 'menu'
+require_relative 'structs'
 
 @inventory = Inventory.new(
     [

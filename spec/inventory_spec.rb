@@ -32,5 +32,16 @@ describe Inventory do
         ) }.to output("\nYou added a:\n2 Yellow Make Model worth approximately $5\n").to_stdout
         expect(@blankInventory.cars.size).to eq(1)
     end
+
+    it "sell_car should ask for car to sell" do 
+        allow_any_instance_of(Kernel).to receive(:gets).and_return('1')
+        allow(@filledInventory).to receive(:display_totals).with(@filledInventory.cars[0]).and_return(nil)
+        expect {@filledInventory.sell_car}.to output("Which car do you want to sell?\n1. 2010 Toyota Corolla Green\n2. 2020 Ford F150 Red\n").to_stdout
+    end
+
+    it "sell_car should show message when no cars" do 
+        allow(@blankInventory).to receive(:display_totals).with(@blankInventory.cars[0]).and_return(nil)
+        expect {@blankInventory.sell_car}.to output("No cars for sale\n").to_stdout
+    end
   
   end

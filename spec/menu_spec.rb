@@ -11,7 +11,7 @@ describe Menu do
     it "should display menu" do
         allow_any_instance_of(Menu).to receive(:handle_input).and_return('')
         expect {@menu.display_menu }.to  output(
-            "1. Add a Car\n2. List Inventory\nq. to quit\n"
+            "1. Add a Car\n2. List Inventory\n3. Sell Car\nq. to quit\n"
         ).to_stdout
     end
     
@@ -37,6 +37,14 @@ describe Menu do
         allow(@menu).to receive(:display_menu).and_return("")
         @menu.handle_input
         expect(@menu.inventory).to have_received(:display_cars)
+    end
+
+    it "should sell car when input is 3" do
+        allow_any_instance_of(Kernel).to receive(:gets).and_return('3')
+        allow(@menu.inventory).to receive(:sell_car).and_return("done")
+        allow(@menu).to receive(:display_menu).and_return("")
+        @menu.handle_input
+        expect(@menu.inventory).to have_received(:sell_car)
     end
 
   

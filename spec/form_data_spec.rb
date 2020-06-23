@@ -19,6 +19,6 @@ describe FormData do
         expect(car.make).to eq("toy")
         expect(car.model).to eq("car")
         expect(car.color).to eq("brown")
-        expect(car.value).to eq("4")
+        expect(car.value).to eq(4)
     end  
   end
