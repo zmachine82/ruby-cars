@@ -1,5 +1,6 @@
 require_relative 'car'
 require_relative 'inventory'
+require_relative 'form_data'
 require_relative 'menu'
 
 @inventory = Inventory.new(
@@ -8,16 +9,9 @@ require_relative 'menu'
         Car.new("2020", "Toyota", "Corolla", "Red", "10000")
     ])
 
-@menu = Menu.new
 
-@inventory.display_cars
+puts "Welcome to Ted's used cars inventory"
+Menu.new(@inventory).display_menu
 
-car = @menu.add_car_questions
-
-@inventory.add_car(car)
-
-puts ""
-
-@inventory.display_cars
 
 

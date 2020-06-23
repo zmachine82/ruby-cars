@@ -1,20 +1,28 @@
 class Menu
-    def add_car_questions
-        puts ""
-        puts "Let's add a car!"
-        year = ask_question("year")
-        make = ask_question("make")
-        model = ask_question("model")
-        color = ask_question("color")
-        value = ask_question("value")
-        Car.new(year, make, model, color, value)
+    attr_reader :inventory
+
+    def initialize(inventory)
+        @inventory = inventory
     end
 
-    private
+    def display_menu
+        puts "1. Add a Car"
+        puts "2. List Inventory"
+        puts "q. to quit"
+        handle_input
+    end
 
-    def ask_question(value)
+    def handle_input
+        input = gets.chomp
         puts ""
-        puts "What is the car's #{value}?"
-        gets.chomp
+        if input == "1"
+            @inventory.add_car(FormData.add_car_questions)
+        elsif input == "2"
+            @inventory.display_cars
+        elsif input == "q"
+            exit
+        end
+        puts ""
+        display_menu
     end
 end
