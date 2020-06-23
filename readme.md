@@ -1,16 +1,25 @@
 step 1:
-   define a simple method and call it
+   define a simple class and new it up
 
-   def say_hello
-    puts "Hello World"
+   a class is a blueprint that makes an object
+
+   each object can have different values for the same attribute ie: car1 can have year = 2010 and car2 can have year = 2020
+
+   class Car
+    attr_reader :year
+
+    def initialize(year)
+        @year = year
+    end
    end
 
-   say_hello
+   car1 = Car.new(2010)
+   car2 = Car.new(2020)
 
 Challenge: 
     Context: We are making a simple Car Inventory System for a small used car dealer. Our first request is to add a simple way to add new inventory into the system as it comes in.
 
-    Objective: Reduce duplication of code without losing the functionality we had before
+    Objective: Adding a car class makes sense as a driving force of this application will be around the concept of a car. Having a single definition of what a car is can be encapsulated into the car class. Lets make a car class and use it in our program without breaking functionality
 
     tips:
-        there are several ways you can go about using methods here. experiment with a few different ways until you find something that makes sense to you.
+        classes can have their own methods, like to_s to make some of our functionality have a good home

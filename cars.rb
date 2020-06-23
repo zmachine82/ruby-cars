@@ -1,24 +1,16 @@
 puts "Let's add a car!"
 
-puts ""
-puts "What is the car's year?"
-year = gets.chomp
+def ask_question(value)
+    puts ""
+    puts "What is the car's #{value}?"
+    gets.chomp
+end
 
-puts ""
-puts "What is the car's make?"
-make = gets.chomp
-
-puts ""
-puts "What is the car's model?"
-model = gets.chomp
-
-puts ""
-puts "What is the car's color?"
-color = gets.chomp
-
-puts ""
-puts "What is the car's value?"
-value = gets.chomp
+year = ask_question("year")
+make = ask_question("make")
+model = ask_question("model")
+color = ask_question("color")
+value = ask_question("value")
 
 puts ""
 puts "You added a: "
