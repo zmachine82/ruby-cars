@@ -26,6 +26,5 @@ class Menu
             exit
         end
         puts ""
-        display_menu
     end
 end

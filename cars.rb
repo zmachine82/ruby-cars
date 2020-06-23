@@ -12,7 +12,8 @@ require_relative 'structs'
 
 
 puts "Welcome to Ted's used cars inventory"
-Menu.new(@inventory).display_menu
-
+loop do 
+    Menu.new(@inventory).display_menu
+end
 
 
