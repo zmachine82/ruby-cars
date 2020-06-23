@@ -17,6 +17,7 @@ class Inventory
         puts ""
         puts "You added a:"
         puts car
+        CsvClient.add_car(car)
     end
 
     def sell_car
@@ -46,6 +47,7 @@ class Inventory
         input = gets.chomp
         if input == "y"
             @cars.delete(car)
+            CsvClient.write_cars(@cars)
         elsif input == "n"
             puts "not sold"
         else
