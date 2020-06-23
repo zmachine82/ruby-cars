@@ -7,18 +7,10 @@ step 1:
 
    say_hello
 
-step 2:
-    delete hello world
-    puts a welcome message of some kind --customize
-    input = gets -- capture data into variable
-    puts input -- puts variable instead of hard coded string
-
 Challenge: 
     Context: We are making a simple Car Inventory System for a small used car dealer. Our first request is to add a simple way to add new inventory into the system as it comes in.
 
-    Objective: create a basic intake form for a car, after collecting the data display it in a single puts statment in a sensible way
+    Objective: Reduce duplication of code without losing the functionality we had before
 
     tips:
-        -- puts and gets several times using different variables 
-            -- collect the year, make, model, color, price... anything you think is important about a car
-        --at the end, display the final puts in any order that makes sense to you
+        there are several ways you can go about using methods here. experiment with a few different ways until you find something that makes sense to you.
