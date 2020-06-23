@@ -1,5 +1,11 @@
 step 1:
-    puts "hello world"
+   define a simple method and call it
+
+   def say_hello
+    puts "Hello World"
+   end
+
+   say_hello
 
 step 2:
     delete hello world
