@@ -1,0 +1,83 @@
+Do more of hack-a-thon type approach to group time:
+
+    small group that can be the same or change day to day, week to week, or whatever time we feel appropriate
+
+    small challenges based on the curriculum covered, maybe stick to a theme, like cars or anything else
+    we can give them sticking point code, such as input/output code they maybe don't know
+
+    ex:
+        ruby:
+            Car data entry app
+                1st week: 
+                    Monday - explain IRB vs ruby in cmdline.  Thursday - use variables to capture 'gets' and print to console with puts
+                2nd week: 
+                    Monday - use methods to group related puts/gets calls. Thursday - create a car class to capture data and puts car at end of file
+                3rd week: 
+                    Monday - Make a car lot class to hold the cars and add cars to it. Thursday - Separate classes to different files 2 classes and a main runner file. Make the menu conditional instead of linear
+                4th week: 
+                    Monday - Make a Module to do some calculations on car prices. Thursday - Use a struct or hash to collect data (maybe a discount or upgrade from the calculations module)
+                5th week:
+                    Monday - make class/module to save and load data or cars, Thursday - buffer - add another feature, Car loan info? employee time in/time out? Html generator using ERB?
+                6th week: 
+                    Monday - continue on bonus features or new app. Thursday - Inheritance or mixin. maybe a searchable mixin for the cars?
+                7th week:
+                    Monday - Distribution of app/ show off in class to other groups?, Thursday - ???
+
+        rails:        
+            1st week: 
+                Monday - create app and get it working on peoples machines Thursday - Car MVC
+            2nd week: 
+                Monday - LABOR DAY, Thursday - Add new migration to Car model, use a view helper to display car info
+            3rd week: 
+                Monday - Make a show page for a single car, Thursday - Edit/Create pages for new cars and partials
+            4th week and on:
+                continue on the schedule applying to cars, 
+                also add in other features as bonuses for groups that breeze through the covered material, such as loan calculations, employee timecards, tracking payments
+
+
+Monday, July 8th
+- Introduction
+- Running Ruby
+Thursday, July 11th
+- Numbers and Strings
+- Variables and Objects
+——————————————
+Monday, July 15th
+- Self
+- Methods
+Thursday, July 18th
+- Classes
+- Attributes
+——————————————
+Monday, July 22nd
+- Arrays
+- Objects Interacting
+Thursday, July 25th
+- Separate Source File
+- Unit Testing
+- Conditionals and TDD
+——————————————
+Monday, July 29th
+- Modules
+- Blocks
+Thursday, August 1st
+- Symbols and Structs
+- Hashes
+——————————————
+Monday, August 5th
+- Custom Iterators
+- Input/Output
+Thursday, August 8th
+- Buffer
+——————————————
+Monday, August 12th
+- Buffer
+Thursday, August 15th
+- Inheritance
+- Mixins
+-----------------------------
+Monday, August 19th
+- Distribution
+- Wrap-up
+Thursday, August 22nd
+- Review (edited) 
