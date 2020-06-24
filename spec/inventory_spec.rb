@@ -1,5 +1,6 @@
 require_relative '../inventory'
 require_relative '../car'
+require_relative '../csv_client'
 
 describe Inventory do
 
@@ -27,6 +28,7 @@ describe Inventory do
     end
 
     it "add_car should print new car and add to inventory" do
+        allow(CsvClient).to receive(:add_car).and_return(nil)
         expect {  @blankInventory.add_car(
             Car.new("2", "Make", "Model", "Yellow", "5")
         ) }.to output("\nYou added a:\n2 Yellow Make Model worth approximately $5\n").to_stdout
