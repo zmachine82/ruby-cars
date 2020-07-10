@@ -30,3 +30,7 @@ end
 form = NewCarForm.new
 car = form.car
 puts car
+
+form2 = NewCarForm.new
+car2 = form2.car
+puts car2
