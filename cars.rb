@@ -1,17 +1,16 @@
-require_relative 'car'
 require_relative 'inventory'
-require_relative 'form_data'
-require_relative 'menu'
+require_relative 'car'
+require_relative 'new-car-form'
+require_relative 'DataFormatter'
 
-@inventory = Inventory.new(
-    [
-        Car.new("2010", "Ford", "F150", "Green", "5000"),
-        Car.new("2020", "Toyota", "Corolla", "Red", "10000")
-    ])
+inventory = Inventory.new
 
+form = NewCarForm.new
+car = form.car
+inventory.add_car(car)
+puts " 2nd car "
+form2 = NewCarForm.new
+car2 = form2.car
+inventory.add_car(car2)
 
-puts "Welcome to Ted's used cars inventory"
-Menu.new(@inventory).display_menu
-
-
-
+inventory.display_cars
