@@ -1,26 +1,33 @@
-def ask_question(value)
-    puts ""
-    puts "What is the car's #{value}?"
-    gets.chomp
+class NewCarForm
+    attr_reader :car
+    
+    def initialize
+        @car = Car.new
+        @car.year = ask_question("year")
+        @car.make = ask_question("make")
+        @car.model = ask_question("model")
+        @car.color = ask_question("color")
+        @car.price = ask_question("price")
+    end
+
+    private
+
+    def ask_question(value)
+        puts ""
+        puts "What is the car's #{value}?"
+        gets.chomp
+    end
 end
 
+class Car
+    attr_accessor :year, :make, :model, :color, :price
 
-
-class Car 
-    attr_reader :year, :make, :model, :color, :value
-    
-    def initialize(year, make, model, color, value)
-        @year = year
-        @make = make
-        @model = model
-        @color = color
-        @value = value
-    end
-    
     def to_s
-        "#{year} #{color} #{make} #{model} worth approximately $#{value}"
+        "#{@year} #{@color} #{@make} #{@model} worth approximately $#{@price}"
     end
 end
+
+
 
 class Inventory
     attr_reader :cars
@@ -44,26 +51,18 @@ class Inventory
     end
 end
 
-inventory = Inventory.new(
-    [
-        Car.new("2010", "Ford", "F150", "Green", "5000"),
-        Car.new("2020", "Toyota", "Corolla", "Red", "10000")
-    ]
-)
-inventory.display_cars
 
-puts ""
-puts "Let's add a car!"
-year = ask_question("year")
-make = ask_question("make")
-model = ask_question("model")
-color = ask_question("color")
-value = ask_question("value")
+inventory = Inventory.new
 
-inventory.add_car(Car.new(year, make, model, color, value))
-
-puts ""
+form = NewCarForm.new
+car = form.car
+inventory.add_car(car)
+puts " 2nd car "
+form2 = NewCarForm.new
+car2 = form2.car
+inventory.add_car(car2)
 
 inventory.display_cars
+
 
 
