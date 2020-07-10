@@ -1,10 +1,10 @@
 step 1:
-   Modules are useful for pure methods, no need for a separate store of data, this will allow us to call these functions directly without needing to new up an instance of that class. 
+   Make a menu using conditionals, as a bonus write tests for all our work so far and test the new conditionals we write today
 
 Challenge: 
     Context: We are making a simple Car Inventory System for a small used car dealer. Our first request is to add a simple way to add new inventory into the system as it comes in.
 
-    Objective: Lets pull out some simple methods to a module and call to ease in testing and simplify logic. then clean up the main runner file and begin are menu
+    Objective: Write a menu class that we can make a useable program that doesn't require coding knowledge to operate and gives us the ability to let the user decide on more things to do in the program
 
     tips:
         we are really starting to put everything together now, use blocks and conditionals to make a simple menu structure

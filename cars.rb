@@ -1,6 +1,7 @@
 require_relative 'inventory'
 require_relative 'car'
 require_relative 'new-car-form'
+require_relative 'DataFormatter'
 
 inventory = Inventory.new
 

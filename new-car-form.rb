@@ -7,7 +7,7 @@ class NewCarForm
         @car.make = ask_question("make")
         @car.model = ask_question("model")
         @car.color = ask_question("color")
-        @car.price = ask_question("price")
+        @car.price = DataFormatter.format_price(ask_question("price"))
     end
 
     private
@@ -15,6 +15,6 @@ class NewCarForm
     def ask_question(value)
         puts ""
         puts "What is the car's #{value}?"
-        gets.chomp
+        gets.chomp.capitalize
     end
 end
