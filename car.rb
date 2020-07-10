@@ -1,15 +1,7 @@
-class Car 
-    attr_reader :year, :make, :model, :color, :value
-    
-    def initialize(year, make, model, color, value)
-        @year = year
-        @make = make
-        @model = model
-        @color = color
-        @value = value
-    end
-    
+class Car
+    attr_accessor :year, :make, :model, :color, :price
+
     def to_s
-        "#{year} #{color} #{make} #{model} worth approximately $#{value}"
+        "#{@year} #{@color} #{@make} #{@model} worth approximately $#{@price}"
     end
 end
